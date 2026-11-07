@@ -1,23 +1,19 @@
-# Шаблон пользовательской истории
+---
+name: User Story
+about: Describe a user story for SecondChance app
+title: ''
+labels: ''
+assignees: ''
+---
 
-## Название
-Короткое название истории
+**As a** [user type]  
+**I want to** [action]  
+**So that** [benefit]  
 
-## История
-**Как** [роль пользователя],
-**я хочу** [действие/функция],
-**чтобы** [польза/цель].
+### Acceptance Criteria
+- [ ] Criteria 1
+- [ ] Criteria 2
 
-## Критерии приёмки
-- [ ] Критерий 1
-- [ ] Критерий 2
-- [ ] Критерий 3
-
-## Приоритет
-Высокий / Средний / Низкий
-
-## Статус (метка)
-new / icebox / technical debt / backlog
-
-## Примечания
-Дополнительная информация, зависимости, ограничения.
+### Details and Assumptions
+- [ ] Details about the feature
+- [ ] Assumptions made

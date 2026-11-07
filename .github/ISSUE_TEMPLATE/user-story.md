@@ -13,3 +13,7 @@ assignees: ''
 ### Acceptance Criteria
 - [ ] Criteria 1
 - [ ] Criteria 2
+
+### Details and Assumptions
+- [ ] Details about the feature
+- [ ] Assumptions made
