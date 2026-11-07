@@ -1,1 +1,4 @@
-# secondchance
+{
+  "esversion": 11,
+  "node": true
+}

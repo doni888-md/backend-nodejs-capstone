@@ -1,0 +1,44 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-backend:
+    name: Lint backend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        working-directory: secondchance-backend
+        run: npm install
+
+      - name: Run lint
+        working-directory: secondchance-backend
+        run: npx jshint .
+
+      - name: Run tests
+        working-directory: secondchance-backend
+        run: npm test
+
+  build-docker:
+    name: Build Docker image
+    runs-on: ubuntu-latest
+    needs: lint-backend
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build image
+        working-directory: secondchance-backend
+        run: docker build -t secondchance-backend .
